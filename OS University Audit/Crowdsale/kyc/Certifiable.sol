@@ -1,8 +1,11 @@
+// Audit COPYRIGHT © 2018 - GLOBALIZED
+// ALL RIGHTS RESERVED.
+
 pragma solidity ^0.4.23;
 
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "./Certifier.sol";
 
-// @audit - https://ropsten.etherscan.io/address/0xe6f4ff243af1743c2b8c6ecb1ad934be89924259
 contract Certifiable is Ownable {
     Certifier public certifier;
     event CertifierChanged(address indexed newCertifier);

@@ -1,6 +1,12 @@
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ERC20/BurnableToken.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ERC827/ERC827Token.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/math/SafeMath.sol";
+// Audit COPYRIGHT © 2018 - GLOBALIZED
+// ALL RIGHTS RESERVED.
+
+pragma solidity ^0.4.23;
+
+import "openzeppelin-solidity/contracts/token/ERC20/BurnableToken.sol";
+import "openzeppelin-solidity/contracts/token/ERC827/ERC827Token.sol";
+import "openzeppelin-solidity/contracts/math/SafeMath.sol";
+import "./kyc/KYCToken.sol";
 
 //@audit - Certifier: 0xf0DC9F2099B46EFb471007bFa337809D82bCEb4F
 //@audit KYCToken not needed to be ERC20 ?? 

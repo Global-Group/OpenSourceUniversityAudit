@@ -1,3 +1,6 @@
+// Audit COPYRIGHT © 2018 - GLOBALIZED
+// ALL RIGHTS RESERVED.
+
 pragma solidity ^0.4.23;
 
 contract Certifier {

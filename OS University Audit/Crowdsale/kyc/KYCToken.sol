@@ -1,4 +1,10 @@
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
+// Audit COPYRIGHT © 2018 - GLOBALIZED
+// ALL RIGHTS RESERVED.
+
+pragma solidity ^0.4.23;
+
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
+import "./Certifiable.sol";
 
 //@audit KYCToken can be only interface and it should not inherit ERC20 ???
 contract KYCToken is ERC20, Certifiable {

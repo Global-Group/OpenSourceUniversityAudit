@@ -1,9 +1,16 @@
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/math/SafeMath.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/crowdsale/validation/CappedCrowdsale.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/crowdsale/validation/TimedCrowdsale.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/crowdsale/emission/AllowanceCrowdsale.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/ownership/Ownable.sol";
+// Audit COPYRIGHT © 2018 - GLOBALIZED
+// ALL RIGHTS RESERVED.
+
+pragma solidity ^0.4.23;
+
+import "openzeppelin-solidity/contracts/math/SafeMath.sol";
+import "openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol";
+import "openzeppelin-solidity/contracts/crowdsale/validation/CappedCrowdsale.sol";
+import "openzeppelin-solidity/contracts/crowdsale/validation/TimedCrowdsale.sol";
+import "openzeppelin-solidity/contracts/crowdsale/emission/AllowanceCrowdsale.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "./EDUToken.sol";
+import "./kyc/Certifiable.sol";
 
 contract EDUCrowdsale is AllowanceCrowdsale, CappedCrowdsale, TimedCrowdsale, Ownable, Certifiable {
     using SafeMath for uint256;
