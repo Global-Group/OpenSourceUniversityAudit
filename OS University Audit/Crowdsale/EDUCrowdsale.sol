@@ -89,11 +89,13 @@ contract EDUCrowdsale is AllowanceCrowdsale, CappedCrowdsale, TimedCrowdsale, Ow
     //@audit - require(_tokenWallet != address(0x0))
     function changeTokenWallet(address _tokenWallet) external onlyOwner {
         tokenWallet = _tokenWallet;
+		//@audit - emit Event
     }
     
     //@audit - require(_wallet != address(0x0))
     function changeWallet(address _wallet) external onlyOwner {
         wallet = _wallet;
+		//@audit - emit Event
     }
 
 }

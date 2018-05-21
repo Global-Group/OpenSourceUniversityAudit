@@ -40,12 +40,14 @@ contract KYCToken is ERC20, Certifiable {
     //@audit - Failed - adding manager by person with the address: 0xca35b7d915458ef540ade6068dfe2f44e8fa733c
     function addManager(address _address) external onlyOwner {
         managers[_address] = true;
+		//@audit - emit Event
     }
     
     //@audit - Successfully removed manager by owner: 0xf0dc9f2099b46efb471007bfa337809d82bceb4f
     //@audit - Failed - removing manager by person with the address: 0xca35b7d915458ef540ade6068dfe2f44e8fa733c
     function removeManager(address _address) external onlyOwner {
         managers[_address] = false;
+		//@audit - emit Event
     }
 
 }
